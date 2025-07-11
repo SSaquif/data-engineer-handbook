@@ -31,6 +31,9 @@ BEGIN
                 t.reb, 
                 t.ast
             )::season_stats] -- need to do type casting
+            -- when players didn't play a season
+            -- to prevent null valued structs in the array
+            when t.season is null then y.seasons
             else y.seasons || array[ROW(
                 t.season, 
                 t.gp, 
