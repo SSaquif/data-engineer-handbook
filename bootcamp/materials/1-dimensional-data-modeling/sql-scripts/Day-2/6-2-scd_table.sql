@@ -104,4 +104,4 @@ SELECT * FROM new_records
 
 -- But the query also has a sequential problem 
 -- we are depending on yesterday's data to insert today's data
--- harder to backfill
+-- harder to backfill (fill in missing data)
